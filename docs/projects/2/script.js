@@ -19,7 +19,7 @@ const backgroundLayer5 = new Image();
 backgroundLayer5.src = 'layer-5.png';
 
 const slider = document.getElementById('slider');
-slider.value = gmaeSpeed;
+slider.value = gameSpeed;
 const showGameSpeed = document.getElementById('showGameSpeed');
 showGameSpeed.innerHTML = gameSpeed;
 slider.addEventListener('change', function(e){
