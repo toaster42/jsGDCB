@@ -19,11 +19,16 @@ const backgroundLayer5 = new Image();
 backgroundLayer5.src = 'layer-5.png';
 
 let x = 0;
+let x2 = 2400;
 
 function animate(){
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.drawImage(backgroundLayer4, x, 0);
-  x -= gameSpeed % -CANVAS_WIDTH; //horizontal scroll left by gameSpeed
+  ctx.drawImage(backgroundLayer4, x2, 0);
+  if(x < -2400) x = 2400 - gameSpeed;
+  else x -= gameSpeed; //horizontal scroll left by gameSpeed
+  if(x2 < -2400) x2 = 2400 - gameSpeed;
+  else x2 -= gameSpeed; //horizontal scroll left by gameSpeed
   requestAnimationFrame(animate);
  };
 animate();
