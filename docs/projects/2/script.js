@@ -25,6 +25,7 @@ showGameSpeed.innerHTML = gameSpeed;
 slider.addEventListener('change', function(e){
   console.log(e.target.value);
   gameSpeed = e.target.value;
+  showGameSpeed.innerHTML = e.target.value;
 });
 class Layer {
   constructor(image, speedModifier){
